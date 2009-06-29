@@ -3,6 +3,7 @@ class CreateSubscriptions < ActiveRecord::Migration
     create_table :subscriptions do |t|
       t.integer :user_id
       t.integer :mailing_list_id
+      t.string  :email
 
       t.timestamps
     end
