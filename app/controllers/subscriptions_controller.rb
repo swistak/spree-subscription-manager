@@ -11,8 +11,12 @@ class SubscriptionsController < Spree::BaseController
       redirect_to :back
     end
   end
+
+  create_fails.response.html do
+    flash[:notice] = I18n.t(:incorrect_email)
+    redirect_to :back
+  end
     
-  
   destroy.response do |wants|
     wants.html do
       flash[:notice] = I18n.t(:unsubscribed)

@@ -15,3 +15,4 @@ pl:
   'When your user goes to create an account, they will be asked if they want to subscribe to these mailing lists': Gdy użytkownik będzie się rejestrował, zostanie zapytany czy chce otrzymywać wiadomości z poniższych list
   subscribed: Zapisano!
   unsubscribe: Wypisano!
+  incorrect_email: Podałeś nieprawidłowy adres email
