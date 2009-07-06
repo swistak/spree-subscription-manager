@@ -12,7 +12,7 @@ class SubscriptionsController < Spree::BaseController
     end
   end
 
-  create.failure.response.html do
+  create.failure.wants.html do
     flash[:notice] = I18n.t(:incorrect_email)
     redirect_to :back
   end
