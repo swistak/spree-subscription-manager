@@ -1,7 +1,7 @@
-  <% MailingList.all.each do |ml| %> 
-  <div class="rounded">
+<% MailingList.all.each do |ml| %> 
+  <div>
     <%= check_box_tag "user[mailing_list][#{ml.id}]", true, (@user.new_record? ? true : @user.mailing_lists.include?(ml)) %>
-    <%= t(ml.form_text, :default => ml.form_text) %>
+    <label for="user_mailing_list_<%=ml.id%>"> <%= t(ml.form_text, :default => ml.form_text) %> </label>
     <input type="hidden" name="user[mailing_list][0]" value="true" />
   </div>
-  <% end %>  
+<% end %>  
