@@ -6,6 +6,10 @@ class CreateMailingLists < ActiveRecord::Migration
 
       t.timestamps
     end
+    MailingList.create({
+      :name => "newsletter",
+      :form_text => "Default newsletter"
+    })                            
   end
 
   def self.down
