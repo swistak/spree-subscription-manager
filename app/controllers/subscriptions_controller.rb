@@ -5,6 +5,10 @@ class SubscriptionsController < Spree::BaseController
   resource_controller
   actions :all, :only => [:create, :destroy]
 
+  def index
+    redirect_to '/'
+  end
+
   create.response do |wants|
     wants.html do
       flash[:notice] = I18n.t(:subscribed)
