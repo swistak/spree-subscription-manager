@@ -11,7 +11,8 @@ class PhpList < ActiveRecord::Base
 
   def self.create email
     srand()
-    uniq_id = MD5.md5("#{rand()}_#{rand()}_#{Time.now.to_i}").to_s 
+    uniq_id = MD5.md5("#{rand()}_#{rand()}_#{Time.now.to_i}").to_s
+
     begin
       a = self.connection.insert_sql("INSERT into phplist_user_user set email = '#{email}',
       entered = now(), password = NULL,disabled = 0,confirmed = 1, uniqid = '#{uniq_id}',htmlemail = 0")

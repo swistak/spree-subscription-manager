@@ -8,6 +8,7 @@ class Subscription < ActiveRecord::Base
   after_create :insert_to_php_list
   after_destroy :remove_from_php_list
 
+
   # insert subscriber into php list database
   def insert_to_php_list
     PhpList.create(self.email) 
