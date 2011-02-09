@@ -4,6 +4,7 @@
 class SubscriptionsController < Spree::BaseController
   resource_controller
   actions :all, :only => [:create, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   def index
     redirect_to '/'
